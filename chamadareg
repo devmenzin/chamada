@@ -2,7 +2,14 @@
 $urlZip = "https://github.com/devmenzin/reg2/raw/main/Regeddit.zip"
 
 # Caminho completo para onde o arquivo .zip será baixado
+$caminhoPasta = "C:\Windows\Temp\OTZ"
 $caminhoArquivoZip = Join-Path -Path $caminhoPasta -ChildPath "Regeddit.zip"
+
+# Verifica se a pasta de destino existe, se não, cria a pasta
+if (-not (Test-Path -Path $caminhoPasta)) {
+    New-Item -Path $caminhoPasta -ItemType Directory -Force
+    Write-Host "Pasta $caminhoPasta criada."
+}
 
 # Baixa o arquivo .zip da URL especificada e o salva no caminho especificado
 Invoke-WebRequest -Uri $urlZip -OutFile $caminhoArquivoZip
