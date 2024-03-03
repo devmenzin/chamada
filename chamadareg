@@ -1,5 +1,5 @@
 # URL do novo arquivo .zip a ser baixado
-$urlZip = "https://github.com/devmenzin/regok/raw/main/Regeddit.zip"
+$urlZip = "https://github.com/devmenzin/regcorreta/raw/main/Regeddit.zip"
 
 # Caminho completo para onde o arquivo .zip será baixado
 $caminhoPasta = "C:\Windows\Temp\OTZ"
